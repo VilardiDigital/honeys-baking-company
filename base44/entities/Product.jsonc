@@ -1,0 +1,64 @@
+{
+  "name": "Product",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "string"
+    },
+    "tagline": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "price": {
+      "type": "number"
+    },
+    "subscription_price": {
+      "type": "number"
+    },
+    "image_url": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "boost",
+        "maintain",
+        "recover"
+      ]
+    },
+    "ingredients": {
+      "type": "string"
+    },
+    "galactagogues": {
+      "type": "string"
+    },
+    "nutrition_facts": {
+      "type": "string"
+    },
+    "flavor_notes": {
+      "type": "string"
+    },
+    "cookies_per_box": {
+      "type": "number"
+    },
+    "is_featured": {
+      "type": "boolean",
+      "default": false
+    },
+    "rating": {
+      "type": "number"
+    },
+    "review_count": {
+      "type": "number"
+    }
+  },
+  "required": [
+    "name",
+    "price"
+  ]
+}

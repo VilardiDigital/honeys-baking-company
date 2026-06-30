@@ -1,0 +1,35 @@
+{
+  "name": "CartItem",
+  "type": "object",
+  "properties": {
+    "product_id": {
+      "type": "string"
+    },
+    "product_name": {
+      "type": "string"
+    },
+    "product_image": {
+      "type": "string"
+    },
+    "quantity": {
+      "type": "number",
+      "default": 1
+    },
+    "price": {
+      "type": "number"
+    },
+    "is_subscription": {
+      "type": "boolean",
+      "default": false
+    },
+    "session_id": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "product_id",
+    "product_name",
+    "price",
+    "session_id"
+  ]
+}

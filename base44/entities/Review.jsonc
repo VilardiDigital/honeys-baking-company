@@ -1,0 +1,31 @@
+{
+  "name": "Review",
+  "type": "object",
+  "properties": {
+    "product_id": {
+      "type": "string"
+    },
+    "author_name": {
+      "type": "string"
+    },
+    "rating": {
+      "type": "number"
+    },
+    "content": {
+      "type": "string"
+    },
+    "days_postpartum": {
+      "type": "number"
+    },
+    "verified": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "required": [
+    "product_id",
+    "author_name",
+    "rating",
+    "content"
+  ]
+}

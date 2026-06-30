@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 36 60% 97%;
+    --foreground: 30 8% 15%;
+    --card: 36 60% 97%;
+    --card-foreground: 30 8% 15%;
+    --popover: 36 60% 97%;
+    --popover-foreground: 30 8% 15%;
+    --primary: 34 56% 51%;
+    --primary-foreground: 36 60% 97%;
+    --secondary: 100 10% 40%;
+    --secondary-foreground: 36 60% 97%;
+    --muted: 36 30% 92%;
+    --muted-foreground: 30 8% 40%;
+    --accent: 36 30% 92%;
+    --accent-foreground: 30 8% 15%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 36 30% 85%;
+    --input: 36 30% 85%;
+    --ring: 34 56% 51%;
+    --chart-1: 34 56% 51%;
+    --chart-2: 100 10% 40%;
+    --chart-3: 30 8% 15%;
+    --chart-4: 36 60% 97%;
+    --chart-5: 36 30% 70%;
+    --radius: 9999px;
+    --font-heading: 'Playfair Display', Georgia, 'Times New Roman', serif;
+    --font-body: 'Inter', ui-sans-serif, system-ui, sans-serif;
+    --font-display: 'Playfair Display', Georgia, 'Times New Roman', serif;
+    --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    --sidebar-background: 36 60% 97%;
+    --sidebar-foreground: 30 8% 15%;
+    --sidebar-primary: 34 56% 51%;
+    --sidebar-primary-foreground: 36 60% 97%;
+    --sidebar-accent: 36 30% 92%;
+    --sidebar-accent-foreground: 30 8% 15%;
+    --sidebar-border: 36 30% 85%;
+    --sidebar-ring: 34 56% 51%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground font-body;
+    font-size: 18px;
+    line-height: 1.6;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    letter-spacing: 0.02em;
+    line-height: 1.1;
+  }
+}
+
+/* Organic section divider */
+.honey-divider {
+  position: relative;
+  height: 60px;
+  overflow: hidden;
+}
+.honey-divider::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: currentColor;
+  clip-path: ellipse(55% 100% at 50% 100%);
+  opacity: 0.04;
+}
+
+/* Dough-rise animation */
+@keyframes dough-rise {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.03); }
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Honeycomb progress fill */
+@keyframes honey-fill {
+  from { width: 0; }
+}
