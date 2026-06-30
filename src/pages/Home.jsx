@@ -10,36 +10,48 @@ import Footer from '@/components/Footer';
 
 const products = [
   {
-    id: 1,
+    id: "oatmeal-chocolate-chip",
+    slug: "oatmeal-chocolate-chip",
     name: "Oatmeal Chocolate Chip",
-    description: "Our signature blend — rich, comforting, effective",
+    tagline: "Our signature blend — rich, comforting, effective",
     price: 24.99,
     subscription_price: 21.24,
-    image: "/images/oatmeal-chocolate-chip.jpg"
+    image_url: "/images/oatmeal-chocolate-chip.jpg",
+    category: "boost",
+    galactagogues: "Brewer's Yeast, Flaxseed, Oats, Wheat Germ"
   },
   {
-    id: 2,
+    id: "peanut-butter-oat",
+    slug: "peanut-butter-oat",
     name: "Peanut Butter Oat",
-    description: "Creamy, protein-rich, and deeply satisfying",
+    tagline: "Creamy, protein-rich, and deeply satisfying",
     price: 24.99,
     subscription_price: 21.24,
-    image: "/images/peanut-butter-oat.jpg"
+    image_url: "/images/peanut-butter-oat.jpg",
+    category: "maintain",
+    galactagogues: "Brewer's Yeast, Flaxseed, Oats, Fenugreek"
   },
   {
-    id: 3,
+    id: "double-chocolate-fudge",
+    slug: "double-chocolate-fudge",
     name: "Double Chocolate Fudge",
-    description: "Decadent indulgence meets functional nutrition",
+    tagline: "Decadent indulgence meets functional nutrition",
     price: 26.99,
     subscription_price: 22.94,
-    image: "/images/double-chocolate-fudge.jpg"
+    image_url: "/images/double-chocolate-fudge.jpg",
+    category: "boost",
+    galactagogues: "Brewer's Yeast, Flaxseed, Oats, Coconut Oil"
   },
   {
-    id: 4,
+    id: "lemon-coconut-bliss",
+    slug: "lemon-coconut-bliss",
     name: "Lemon Coconut Bliss",
-    description: "Bright, tropical, and refreshingly light",
+    tagline: "Bright, tropical, and refreshingly light",
     price: 24.99,
     subscription_price: 21.24,
-    image: "/images/lemon-coconut-bliss.jpg"
+    image_url: "/images/lemon-coconut-bliss.jpg",
+    category: "recover",
+    galactagogues: "Brewer's Yeast, Flaxseed, Oats, Fenugreek, Coconut Oil"
   }
 ];
 
@@ -49,8 +61,16 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-honey-50">
       <Navbar />
-      <HeroSection onGoalSelect={setActiveGoal} activeGoal={activeGoal} />
-      <ProductGrid products={products} activeGoal={activeGoal} />
+      <HeroSection
+        onGoalSelect={setActiveGoal}
+        activeGoal={activeGoal}
+      />
+
+      <ProductGrid
+        products={products}
+        activeGoal={activeGoal}
+      />
+
       <StorySection />
       <ScienceSection />
       <ReviewsSection />
